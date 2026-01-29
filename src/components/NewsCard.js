@@ -202,9 +202,10 @@ export default function NewsCard({ article, featured = false, variant = 'default
                     flexDirection: 'column'
                 }}>
                     <h3 className="line-clamp-2" style={{
-                        fontSize: 'clamp(1.125rem, 2vw, 1.375rem)',
+                        fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
                         fontFamily: 'var(--font-heading)',
-                        marginBottom: 'var(--spacing-sm)',
+                        marginBottom: '0.25rem',
+                        lineHeight: '1.3',
                         color: 'var(--color-text-primary)',
                         fontWeight: '700'
                     }}>
@@ -212,9 +213,10 @@ export default function NewsCard({ article, featured = false, variant = 'default
                     </h3>
 
                     <p className="line-clamp-3" style={{
-                        fontSize: '0.9375rem',
+                        fontSize: '0.875rem',
+                        lineHeight: '1.5',
                         color: 'var(--color-text-secondary)',
-                        marginBottom: 'var(--spacing-md)',
+                        marginBottom: '0.5rem',
                         flex: 1
                     }}>
                         {article.excerpt}
@@ -224,8 +226,9 @@ export default function NewsCard({ article, featured = false, variant = 'default
                     <div style={{
                         display: 'flex',
                         alignItems: 'center',
+                        alignItems: 'center',
                         justifyContent: 'space-between',
-                        paddingTop: 'var(--spacing-md)',
+                        paddingTop: '0.5rem',
                         borderTop: '1px solid var(--color-border)',
                         fontSize: '0.8125rem',
                         color: 'var(--color-text-tertiary)'

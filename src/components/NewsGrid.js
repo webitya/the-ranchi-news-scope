@@ -28,11 +28,7 @@ export default function NewsGrid({ articles, title, loading = false }) {
                 </div>
             )}
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
-                gap: '4px'
-            }}>
+            <div className="news-grid">
                 {loading ? (
                     Array(6).fill(0).map((_, i) => <SkeletonCard key={i} />)
                 ) : (
