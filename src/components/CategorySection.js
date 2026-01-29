@@ -62,7 +62,7 @@ export default function CategorySection({ category, articles }) {
 
                 <div style={{
                     display: 'flex',
-                    gap: 'var(--spacing-lg)',
+                    gap: '4px',
                     overflowX: 'auto',
                     scrollbarWidth: 'thin',
                     paddingBottom: 'var(--spacing-md)',

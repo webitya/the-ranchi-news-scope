@@ -50,7 +50,8 @@ export default function NewsletterSection() {
                 position: 'relative',
                 zIndex: 1,
                 textAlign: 'center',
-                maxWidth: '600px'
+                width: '100%',
+                padding: '0'
             }}>
                 <h2 style={{
                     fontFamily: 'var(--font-heading)',

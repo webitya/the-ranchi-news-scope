@@ -99,7 +99,7 @@ export default function NewsCard({ article, featured = false, variant = 'default
                         bottom: 0,
                         left: 0,
                         right: 0,
-                        padding: 'var(--spacing-xl)',
+                        padding: 'var(--spacing-xl) 0',
                         color: 'white'
                     }}>
                         <span className="badge" style={{

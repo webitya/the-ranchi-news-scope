@@ -134,15 +134,37 @@ export default function Header() {
                         </span>
                         <div style={{
                             display: 'flex',
-                            gap: '2rem',
-                            animation: 'scroll 30s linear infinite',
-                            whiteSpace: 'nowrap'
+                            overflow: 'hidden',
+                            position: 'relative',
+                            width: '100%'
                         }}>
-                            <span>Heavy rainfall alert issued for Ranchi and surrounding districts</span>
-                            <span>•</span>
-                            <span>Chief Minister announces new employment scheme for youth</span>
-                            <span>•</span>
-                            <span>Ranchi Airport to get international terminal by 2027</span>
+                            <div style={{
+                                display: 'flex',
+                                gap: '2rem',
+                                paddingRight: '2rem',
+                                animation: 'scroll 40s linear infinite',
+                                whiteSpace: 'nowrap',
+                                minWidth: 'max-content'
+                            }}
+                                onMouseEnter={(e) => e.currentTarget.style.animationPlayState = 'paused'}
+                                onMouseLeave={(e) => e.currentTarget.style.animationPlayState = 'running'}
+                            >
+                                {/* Original List */}
+                                <span>Heavy rainfall alert issued for Ranchi and surrounding districts</span>
+                                <span>•</span>
+                                <span>Chief Minister announces new employment scheme for youth</span>
+                                <span>•</span>
+                                <span>Ranchi Airport to get international terminal by 2027</span>
+                                <span>•</span>
+
+                                {/* Duplicated List for Seamless Loop */}
+                                <span>Heavy rainfall alert issued for Ranchi and surrounding districts</span>
+                                <span>•</span>
+                                <span>Chief Minister announces new employment scheme for youth</span>
+                                <span>•</span>
+                                <span>Ranchi Airport to get international terminal by 2027</span>
+                                <span>•</span>
+                            </div>
                         </div>
                         <div style={{
                             marginLeft: 'auto',
@@ -176,7 +198,7 @@ export default function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    padding: '0.75rem var(--spacing-lg)',
+                    padding: '0.75rem 0',
                     gap: '1rem'
                 }}>
                     {/* Logo Section */}

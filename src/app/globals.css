@@ -49,13 +49,6 @@
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
 
-  /* Border Radius - Edge Only Design */
-  --radius-sm: 0;
-  --radius-md: 0;
-  --radius-lg: 0;
-  --radius-xl: 0;
-  --radius-full: 0;
-
   /* Transitions */
   --transition-fast: 150ms ease-in-out;
   --transition-base: 250ms ease-in-out;
@@ -209,24 +202,26 @@ a:hover {
 
 .container {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container-wide {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .section {
   padding: var(--spacing-3xl) 0;
+  width: 100%;
 }
 
 .section-sm {
   padding: var(--spacing-2xl) 0;
+  width: 100%;
 }
 
 /* Cards */
@@ -244,7 +239,7 @@ a:hover {
 }
 
 .card-body {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
 }
 
 /* Buttons */
@@ -415,6 +410,16 @@ a:hover {
 
   50% {
     opacity: 0.7;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
