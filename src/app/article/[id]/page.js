@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { useBookmarks } from '@/context/BookmarksContext';
 import { useToast } from '@/context/ToastContext';
