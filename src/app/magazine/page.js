@@ -98,7 +98,7 @@ export default function MagazinePage() {
                             </p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)' }}>
                                 <div style={{ width: '40px', height: '40px', borderRadius: '0', background: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: '700' }}>
-                                    {featuredArticles[0].author.charAt(0)}
+                                    {featuredArticles?.[0]?.author?.charAt(0) || 'M'}
                                 </div>
                                 <span style={{ fontWeight: '700', color: 'var(--color-text-primary)' }}>{featuredArticles[0].author}</span>
                                 <span style={{ color: 'var(--color-text-tertiary)' }}>• 12 min read</span>

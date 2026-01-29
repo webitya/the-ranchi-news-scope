@@ -166,7 +166,7 @@ export default function ArticlePage({ params }) {
                                 fontWeight: '700',
                                 color: 'var(--color-secondary)'
                             }}>
-                                {article.author.charAt(0)}
+                                {article?.author?.charAt(0) || 'A'}
                             </div>
                             <div>
                                 <div style={{ fontWeight: '700', color: 'var(--color-text-primary)' }}>{article.author}</div>
