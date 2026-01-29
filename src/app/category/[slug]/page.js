@@ -1,17 +1,16 @@
-'use client';
-
+import React from 'react';
 import { useParams } from 'next/navigation';
 import { newsArticles } from '@/data/newsData';
 import NewsGrid from '@/components/NewsGrid';
 import NewsletterSection from '@/components/NewsletterSection';
 
-export default function CategoryPage() {
-    const params = useParams();
-    const slug = params.slug;
+export default function CategoryPage({ params }) {
+    const unwrappedParams = React.use(params);
+    const slug = unwrappedParams?.slug || '';
 
     // Convert slug back to title case for filtering
-    const categoryName = slug.charAt(0).toUpperCase() + slug.slice(1);
-    const articles = newsArticles.filter(a => a.category.toLowerCase() === slug.toLowerCase());
+    const categoryName = slug ? (slug.charAt(0).toUpperCase() + slug.slice(1)) : 'Category';
+    const articles = slug ? newsArticles.filter(a => a.category.toLowerCase() === slug.toLowerCase()) : [];
 
     const getCategoryColor = (category) => {
         const colors = {

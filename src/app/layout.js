@@ -37,7 +37,12 @@ export const metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
   themeColor: "#0A1628",
 };
 

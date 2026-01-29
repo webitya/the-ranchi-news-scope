@@ -1,6 +1,4 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useBookmarks } from '@/context/BookmarksContext';
 import { useToast } from '@/context/ToastContext';
 import { newsArticles } from '@/data/newsData';
@@ -10,7 +8,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function ArticlePage({ params }) {
-    const { id } = params;
+    const unwrappedParams = React.use(params);
+    const { id } = unwrappedParams;
     const { isBookmarked, toggleBookmark } = useBookmarks();
     const { showToast } = useToast();
     const [scrolled, setScrolled] = useState(0);
